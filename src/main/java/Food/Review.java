@@ -3,6 +3,8 @@
  */
 package Food;
 
+import java.util.ArrayList;
+
 /**
  * @author jolsen001
  *
@@ -18,13 +20,13 @@ public class Review {
 	/**
 	 * 
 	 */
-	public Review(String itemName, String userEmail, String rating, String title, String reviewDescrip, boolean anon) {
-		this.itemName = itemName;
-		this.userEmail = userEmail;
-		this.rating = rating;
-		this.title = title;
-		this.reviewDescrip = reviewDescrip;
-		this.anon = anon;
+	public Review(ArrayList<String> reviewInfo) {
+		this.itemName = reviewInfo.get(0);
+		this.userEmail = reviewInfo.get(1);
+		this.rating = reviewInfo.get(2);
+		this.title = reviewInfo.get(3);
+		this.reviewDescrip = reviewInfo.get(4);
+		this.anon = Boolean.parseBoolean(reviewInfo.get(5));
 	}
 	/**
 	 * @return the itemName
