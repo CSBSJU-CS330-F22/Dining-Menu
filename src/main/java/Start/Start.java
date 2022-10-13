@@ -8,7 +8,7 @@ public class Start {
 
 	}
 	public static void main(){
-System.out.print("test");		
+System.out.print("Jerome");		
 	}
 
 }
