@@ -4,11 +4,148 @@
 <meta charset="UTF-8">
 <title>Test html file</title>
 </head>
-<body>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
 
-<h1>Scrumpty Dumpty</h1>
-<h2>Test</h2>
-<h3>Test</h3>
+* {
+	ransition: all 400ms ease;
+}
+
+body {
+	font-family: 'Lato';
+	background: #222; /* color of background */
+	color: #000000; /* color of text in days/banner */
+	min-width: 768px;
+}
+
+.row, .column {
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px
+		rgba(255, 255, 255, 0.2);
+}
+
+/*.row:hover h1, .column:hover h1 {
+	top: -30px;
+}
+*/
+
+.row {
+	width: 95%;
+	background: #D2042D;
+	height: 95px;
+	position: relative;
+	float: left;
+	margin: 1.5% 2.5% 0 2.5%;
+}
+
+.column {
+	width: 28.333333%;
+	background: #D2042D; /*background background of day*/
+	height: 95px;
+	position: relative;
+	float: left;
+	margin: 2.5%;
+}
+
+h1 {
+	width: 100%;
+	position: absolute;
+	background: #DCDCDC; /*baground of day*/
+	padding: 8px;
+	line-height: 1em;
+	top: 0px;
+	font-size: 2em;
+	display: block;
+	font-weight: 200;
+	text-transform: uppercase;
+	text-align: center;
+	margin-left: -8px;
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+}
+
+h1:before, h1:after {
+	position: absolute;
+	display: block;
+	width: 12px;
+	height: 12px;
+	content: " ";
+	transform: rotate(-45deg);
+	z-index: -1;
+	bottom: -6px;
+}
+
+h1:before {
+	left: 3px;
+	background: linear-gradient(135deg, rgba(0, 216, 208, 1) 0%,
+		rgba(0, 0, 0, 1) 100%);
+}
+
+h1:after {
+	background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%,
+		rgba(0, 216, 208, 1) 100%);
+	right: 2px;
+}
+
+span {
+	display: block;
+	box-sizing: border-box;
+	background: #f1f1f1; /* Change dropdown background */
+	width: 90%;
+	top: 22px;
+	color: #444;
+	margin-left: 5%;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	text-shadow: none;
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+
+/*.row:hover span, .column:hover span {
+	top: 39px;
+}
+*/
+
+</style>
+<body>
+	<div class="row">
+		<h1>SJU Dining Menu</h1>
+	</div>
+
+	<div class="column">
+		<span class="message">test</span>
+		<h1>Monday</h1>
+	</div>
+
+	<div class="column">
+		<span class="message">test</span>
+		<h1>Tuesday</h1>
+	</div>
+
+	<div class="column">
+		<span class="message">Blank W</span>
+		<h1>Wednesday</h1>
+	</div>
+	<div class="column">
+		<span class="message">Blank TH</span>
+		<h1>Thursday</h1>
+	</div>
+	<div class="column">
+		<span class="message">Blank F</span>
+		<h1>Friday</h1>
+	</div>
+	<div class="column">
+		<span class="message">Blank Sat</span>
+		<h1>Saturday</h1>
+	</div>
+	<div class="column">
+		<span class="message">Blank Sun</span>
+		<h1>Sunday</h1>
+	</div>
 
 </body>
 </html>
