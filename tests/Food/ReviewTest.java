@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ReviewTest {
+	//Need to make arraylist to pass as parameter
 
 	@Before
 	public void setUp() throws Exception {
