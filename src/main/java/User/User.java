@@ -5,6 +5,8 @@ package User;
 
 import java.util.ArrayList;
 
+import Food.Food;
+
 /**
  * @author jnewhouse003
  *
@@ -14,13 +16,15 @@ public class User {
 	private String password;
 	private String firstName;
 	private String lastName;
+	private Food favFood;
 	
 	
-	public User(ArrayList<String> attributes) {
+	public User(ArrayList<String> attributes, Food food) {
 		this.email = attributes.get(0);
 		this.password = attributes.get(1);
 		this.firstName = attributes.get(2);
 		this.lastName = attributes.get(3);
+		this.setFavFood(food);
 	}
 	
 	public User() {
@@ -76,6 +80,20 @@ public class User {
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	/**
+	 * @return the favFood
+	 */
+	public Food getFavFood() {
+		return favFood;
+	}
+
+	/**
+	 * @param favFood the favFood to set
+	 */
+	public void setFavFood(Food favFood) {
+		this.favFood = favFood;
 	}
 	
 	
