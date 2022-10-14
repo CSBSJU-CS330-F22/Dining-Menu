@@ -5,6 +5,8 @@
 <title>SJU Dining Menu</title>
 </head>
 <style>
+
+/*this sets design attributes to the header*/
 .header {
 	padding: 30px;
 	text-align: center;
@@ -14,31 +16,49 @@
 	font-family: Times New Roman;
 }
 
-.table{
+/*this sets design attributes to the table*/
+.table {
 	padding: 30px;
 	background: #bfbfbf;
+	table-layout: fixed;
 }
+
+/*this sets design attributes for the buttons*/
+.button {
+  transition-duration: 0.4s;
+  padding: 40px 30px;
+}
+
+/*changes button to red while mouse hovers over button*/
+.button:hover {
+  background-color: #D2042D;
+  color: white;
+}
+
 </style>
 
 <body>
+	<!-- Header element -->
 	<div class="header">
 		<h1>Saint John's University Dining Menu</h1>
 	</div>
+	<!-- Table element -->
+		<form method="post" action="ViewMenu.jsp" name="HomePage">
+			<div class="table">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<!-- Buttons for days of the week -->
+						<td><input class="button" value="Monday"    name="SelectedDay" type="submit"></td>
+						<td><input class="button" value="Tuesday"   name="SelectedDay" type="submit"></td>
+						<td><input class="button" value="Wednesday" name="SelectedDay" type="submit"></td>
+						<td><input class="button" value="Thursday"  name="SelectedDay" type="submit"></td>
+						<td><input class="button" value="Friday"    name="SelectedDay" type="submit"></td>
+						<td><input class="button" value="Saturday"  name="SelectedDay" type="submit"></td>
+						<td><input class="button" value="Sunday"    name="SelectedDay" type="submit"></td>
 
-<div class="table">
-	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<tr>
-		<td>Monday</td>
-		<td>Tuesday</td>
-		<td>Wednesday</td>
-		<td>Thursday</td>
-		<td>Friday</td>
-		<td>Saturday</td>
-		<td>Sunday</td>
-		
-	</tr>
-	
-	</table>
-</div>
+					</tr>
+				</table>
+			</div>
+		</form>
 </body>
 </html>
