@@ -10,6 +10,7 @@ import java.util.ArrayList;
  *
  */
 public class Review {
+	
 
 	private String itemName;
 	private String userEmail;
