@@ -1,4 +1,4 @@
-package Food;
+package JDBC;
 
 import static org.junit.Assert.*;
 
@@ -6,8 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ReviewTest {
-	//Need to make arraylist to pass as parameter
+public class JDBCTest {
 
 	@Before
 	public void setUp() throws Exception {

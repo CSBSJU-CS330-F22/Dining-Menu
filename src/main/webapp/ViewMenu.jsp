@@ -1,9 +1,11 @@
+<!-- @Author Grant Evans -->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <%
-//Gets the day that was clicked into usable variable
+//Gets the day that was clicked into a usable variable
 String day = request.getParameter("SelectedDay");
 //prints the day to console
 System.out.println(day);
@@ -23,8 +25,9 @@ System.out.println(day);
 </head>
 <body>
 	<!-- This prints the selected day on the web page -->
-	Day selected: <%out.println(day);%>
-	
+	Day selected:
+	<%out.println(day);%>
+
 	<!-- element to return to home page -->
 	<div class="footer">
 		<a href="HomePage.html">Back to Home Page</a>
