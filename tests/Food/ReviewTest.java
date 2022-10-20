@@ -11,8 +11,7 @@ import org.junit.Test;
 public class ReviewTest {
 	//Need to make arraylist to pass as parameter
 	ArrayList<String> test = new ArrayList<String>();
-	Review rv = new Review(test);
-
+	//Review rv = new Review(test);
 	@Before
 	public void setUp() throws Exception {
 		test.add("Cookie");
@@ -20,18 +19,25 @@ public class ReviewTest {
 		test.add("5");
 		test.add("Great Treat!");
 		test.add("Sugar Cookies");
-		//test.add("true");
+		test.add("true");
+		
 	}
 
 	@After
 	public void tearDown() throws Exception {
-
+		test.remove("Cookie");
+		test.remove("Jbrownlee001@csbsju.edu");
+		test.remove("5");
+		test.remove("Great Treat!");
+		test.remove("Sugar Cookies");
+		test.remove("true");
 		
 	}
 
 	@Test
 	public void testGetItem() {
-		assertEquals("Cookie", rv.getItemName());
+		//assertEquals("Cookie", rv.getItemName());
+		System.out.println(test.get(5));
 		
 	}
 
