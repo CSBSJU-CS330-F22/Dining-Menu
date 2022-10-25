@@ -1,7 +1,7 @@
 <!-- @Author Grant Evans -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" import="JDBC.*" import="java.util.*" import="java.sql.*" import="java.io.*"%>
 
 <!DOCTYPE html>
 <%
@@ -9,6 +9,43 @@
 String day = request.getParameter("SelectedDay");
 //prints the day to console
 System.out.println(day);
+
+String dayParam = "";
+if(day.equals("Sunday"))
+{
+	dayParam = "10/16/2022";
+}
+
+if(day.equals("Monday"))
+{
+	dayParam = "10/17/2022";
+}
+
+if(day.equals("Tuesday"))
+{
+	dayParam = "10/18/2022";
+}
+
+if(day.equals("Wednesday"))
+{
+	dayParam = "10/19/2022";
+}
+
+if(day.equals("Thursday"))
+{
+	dayParam = "10/20/2022";
+}
+
+if(day.equals("Friday"))
+{
+	dayParam = "10/21/2022";
+}
+
+if(day.equals("Saturday"))
+{
+	dayParam = "10/22/2022";
+}
+
 %>
 <html>
 <head>
@@ -25,8 +62,47 @@ System.out.println(day);
 </head>
 <body>
 	<!-- This prints the selected day on the web page -->
-	Day selected:
-	<%out.println(day);%>
+	<%
+	out.println(day+"'s Menu");
+	%>
+	<br>
+	<br>
+	<%
+	JDBCSelect js = new JDBCSelect();
+	ArrayList<String> bList = js.getMenu(dayParam, "Breakfast");
+	ArrayList<String> lList = js.getMenu(dayParam, "Lunch");
+	ArrayList<String> dList = js.getMenu(dayParam, "Dinner");
+	out.println("Breakfast");
+	%>
+	<br>
+	<%
+	for(String s : bList)
+	{
+		out.println(s);%><br><%
+	}
+	%>
+	<br>
+	<%
+	out.println("Lunch");
+	%>
+	<br>
+	<%
+	for(String s : lList)
+	{
+		out.println(s);%><br><%
+	}
+	%>
+	<br>
+	<%
+	out.println("Dinner");
+	%>
+	<br>
+	<%
+	for(String s : dList)
+	{
+		out.println(s);%><br><%
+	}
+	%>
 
 	<!-- element to return to home page -->
 	<div class="footer">
