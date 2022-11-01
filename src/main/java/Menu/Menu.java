@@ -22,6 +22,13 @@ public class Menu {
 		this.mealType = attributes.get(1);
 		this.food = item;
 	}
+	
+	public Menu() {
+		this.date = "monday";
+		this.mealType = "breakfast";
+		//this.food = 
+	}
+	
 	/**
 	 * @return the date
 	 */
