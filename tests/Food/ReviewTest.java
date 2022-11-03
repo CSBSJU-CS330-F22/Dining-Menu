@@ -16,22 +16,14 @@ public class ReviewTest {
 	public void setUp() throws Exception {		
 		rv.setItemName("Cookie");
 		rv.setUserEmail("Jbrownlee001@csbsju.edu");
-		test.add("5");
-		test.add("Great Treat!");
-		test.add("Sugar Cookies");
-		test.add("true");
-		
+		rv.setRating("4");
+		rv.setTitle("Best Dish!");
+		rv.setReviewDescrip("I like food");
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		test.remove("Cookie");
-		test.remove("Jbrownlee001@csbsju.edu");
-		test.remove("5");
-		test.remove("Great Treat!");
-		test.remove("Sugar Cookies");
-		test.remove("true");
-		
+
 	}
 
 	@Test
@@ -49,5 +41,42 @@ public class ReviewTest {
 	public void testGetEmail() {
 		assertEquals("Jbrownlee001@csbsju.edu", rv.getUserEmail());
 	}
+	
+	@Test
+	public void testSetRatingl() {
+		assertEquals("4", rv.getRating());
+	}
+	
+	@Test
+	public void testSetEmail() {
+		rv.setUserEmail("test@csbsju.edu");
+		assertEquals("test@csbsju.edu", rv.getUserEmail());
+	}
+	
+	@Test
+	public void testGetRating() {
+		assertEquals("4", rv.getRating());
+		}
+	
+	@Test
+	public void testGetTitle() {
+		assertEquals("Best Dish!", rv.getTitle());
+		}
+	
+	@Test
+	public void testSetTitle() {
+		rv.setTitle("Test");
+		assertEquals("Test", rv.getTitle());
+		}
 
+	@Test
+	public void testGetReview() {
+		assertEquals("I like food", rv.getReviewDescrip());
+		}
+	
+	@Test
+	public void testSetReview() {
+		rv.setReviewDescrip("Food is good");
+		assertEquals("Food is good", rv.getReviewDescrip());
+		}
 }
