@@ -8,8 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<f:view>
-
-</f:view>
+<%=request.getParameter("food_item") %>
 </body>
 </html>
