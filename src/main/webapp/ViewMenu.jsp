@@ -84,6 +84,9 @@ if(day.equals("Saturday"))
 			out.println(", ");
 			out.println(js.getAverageRatingbyFoodItem(s));
 		}
+		%><a href="./ViewFoodItem.jsp?food_item=<%=s%>"> 
+		<button type="button">></button>
+		</a><%
 		%><br><%
 	}
 	%>
@@ -101,6 +104,9 @@ if(day.equals("Saturday"))
 			out.println(", ");
 			out.println(js.getAverageRatingbyFoodItem(s));
 		}
+		%><a href="./ViewFoodItem.jsp?food_item=<%=s%>"> 
+		<button type="button">></button>
+		</a><%
 		%><br><%
 	}
 	%>
@@ -118,6 +124,9 @@ if(day.equals("Saturday"))
 			out.println(", ");
 			out.println(js.getAverageRatingbyFoodItem(s));
 		}
+		%><a href="./ViewFoodItem.jsp?food_item=<%=s%>"> 
+		<button type="button">></button>
+		</a><%
 		%><br><%
 	}
 	%>
