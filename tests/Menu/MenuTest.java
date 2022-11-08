@@ -9,11 +9,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class MenuTest {
-	Menu mn = new Menu();
+	ArrayList<String> test = new ArrayList<String>();
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		mn.setDate("Monday");
+		test.add("Monday");
+		test.add("Breakfast");
 	}
 
 	@AfterEach
@@ -21,8 +22,8 @@ class MenuTest {
 	}
 
 	@Test
-	void testGetDate() {
-		assertEquals("Monday", mn.getDate());
+	void test() {
+		fail("Not yet implemented");
 	}
 
 }
