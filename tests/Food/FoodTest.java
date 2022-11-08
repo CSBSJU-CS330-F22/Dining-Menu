@@ -1,22 +1,28 @@
-package Food;
+
 
 import junit.framework.TestCase;
+
+import java.util.ArrayList;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import Food.Food;
+
 public class FoodTest extends TestCase{
-	Food fd = new Food();
+	ArrayList<String> test = new ArrayList<String>();
+	Food fd = new Food(test);
+	
 
 	@Before
 	public void setUp() throws Exception {
-		fd.setName("Cookie");
-		fd.setCalories("60");
-		fd.setFat("6");
-		fd.setCarbs("5");
-		fd.setProtein("3");
-		fd.setCholesterol("4");
+		test.add("Cookie");
+		test.add("60");
+		test.add("6");
+		test.add("5");
+		test.add("3");
+		test.add("4");
 	}
 
 	@After
