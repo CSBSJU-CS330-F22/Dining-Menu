@@ -8,7 +8,7 @@ public class JDBCSelect
     {
     	try
     	{
-    		Connection myConn = DriverManager.getConnection("jdbc:sqlite:/home/bhoeschen002/Dining Menu Database/databaseV6.db");
+    		Connection myConn = DriverManager.getConnection("jdbc:sqlite:/home/jnewhouse003/Dining Menu Database/databaseV5.db");
     		return myConn;
     	}
     	catch (Exception e)
