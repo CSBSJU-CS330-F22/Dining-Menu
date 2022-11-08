@@ -26,7 +26,7 @@ public class Menu {
 	public Menu() {
 		this.date = "monday";
 		this.mealType = "breakfast";
-		//this.food = 
+		//this.food = "Sausage";
 	}
 	
 	/**

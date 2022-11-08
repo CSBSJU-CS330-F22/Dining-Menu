@@ -19,6 +19,7 @@ public class ReviewTest {
 		rv.setRating("4");
 		rv.setTitle("Best Dish!");
 		rv.setReviewDescrip("I like food");
+		rv.setAnon(false);
 	}
 
 	@After
@@ -79,4 +80,15 @@ public class ReviewTest {
 		rv.setReviewDescrip("Food is good");
 		assertEquals("Food is good", rv.getReviewDescrip());
 		}
+	
+	//@Test
+	//public void testGetAnon() {
+		//assertFalse(rv.getAnon());
+	//}
+	
+	//@Test
+	//public void testSetAnon() {
+		//rv.setAnon(true);
+		//assertTrue(rv.getAnon());
+	//}
 }
