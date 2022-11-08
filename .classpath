@@ -15,6 +15,12 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="/net/home/jbrownlee001/Dining Menu Database/SQLite JDBC Driver/sqlite-jdbc-3.39.3.0.jar"/>
+=======
+
+	<classpathentry kind="lib" path="/home/bhoeschen002/Dining Menu Database/sqlite-jdbc-3.39.3.0.jar"/>
+
+>>>>>>> 2c7b12e0a6c9cf4af3264d319b03dfbf72654518
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
