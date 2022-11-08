@@ -28,6 +28,15 @@ public class Review {
 		this.reviewDescrip = reviewInfo.get(4);
 		this.anon = Boolean.parseBoolean(reviewInfo.get(5));
 	}
+	
+	public Review() {
+		this.itemName = "name";
+		this.userEmail = "test001@test";
+		this.rating = "0";
+		this.title = "title";
+		this.reviewDescrip = "descrip";
+		this.anon = false;
+	}
 	/**
 	 * @return the itemName
 	 */

@@ -78,7 +78,16 @@ if(day.equals("Saturday"))
 	<%
 	for(String s : bList)
 	{
-		out.println(s);%><br><%
+		out.println(s);
+		if(js.getAverageRatingbyFoodItem(s) != null)
+		{
+			out.println(", ");
+			out.println(String.format("%.2f",js.getAverageRatingbyFoodItem(s)));
+		}
+		%><a href="./ViewFoodItem.jsp?food_item=<%=s%>"> 
+		<button type="button">></button>
+		</a><%
+		%><br><%
 	}
 	%>
 	<br>
@@ -89,7 +98,16 @@ if(day.equals("Saturday"))
 	<%
 	for(String s : lList)
 	{
-		out.println(s);%><br><%
+		out.println(s);
+		if(js.getAverageRatingbyFoodItem(s) != null)
+		{
+			out.println(", ");
+			out.println(String.format("%.2f",js.getAverageRatingbyFoodItem(s)));
+		}
+		%><a href="./ViewFoodItem.jsp?food_item=<%=s%>"> 
+		<button type="button">></button>
+		</a><%
+		%><br><%
 	}
 	%>
 	<br>
@@ -100,7 +118,16 @@ if(day.equals("Saturday"))
 	<%
 	for(String s : dList)
 	{
-		out.println(s);%><br><%
+		out.println(s);
+		if(js.getAverageRatingbyFoodItem(s) != null)
+		{
+			out.println(", ");
+			out.println(String.format("%.2f",js.getAverageRatingbyFoodItem(s)));
+		}
+		%><a href="./ViewFoodItem.jsp?food_item=<%=s%>"> 
+		<button type="button">></button>
+		</a><%
+		%><br><%
 	}
 	%>
 
