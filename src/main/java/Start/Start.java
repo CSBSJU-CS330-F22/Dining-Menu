@@ -1,5 +1,10 @@
 package Start;
 
+/*
+ * Only God and Jerome new how this file worked. Now only God knows
+ * *WARNING* deleting this file DESTROYS THE REPO!!!
+ */
+
 public class Start {
 
 	public static void main(String[] args) {
