@@ -1,3 +1,5 @@
+package Food;
+
 
 
 import static org.junit.Assert.*;
@@ -12,22 +14,28 @@ import Food.Review;
 
 public class ReviewTest {
 	//Need to make arraylist to pass as parameter
-	ArrayList<String> test = new ArrayList<String>();
-	Review rv = new Review(test);
+	Review rv;
+	
+
+
 	@Before
-	public void setUp() throws Exception {		
+	public void setUp() throws Exception {	
+		ArrayList<String> test = new ArrayList<String>();
 		test.add("Cookie");
 		test.add("Jbrownlee001@csbsju.edu");
 		test.add("4");
 		test.add("Best Dish!");
 		test.add("I like food");
 		test.add("false");
+		rv = new Review(test);
 	}
 
 	@After
 	public void tearDown() throws Exception {
 
 	}
+	
+
 
 	@Test
 	public void testGetItem() {
@@ -47,6 +55,7 @@ public class ReviewTest {
 	
 	@Test
 	public void testSetRatingl() {
+		rv.setRating("4");
 		assertEquals("4", rv.getRating());
 	}
 	
