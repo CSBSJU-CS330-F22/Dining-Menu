@@ -1,3 +1,4 @@
+package Food;
 
 
 import junit.framework.TestCase;
@@ -8,21 +9,21 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import Food.Food;
-
 public class FoodTest extends TestCase{
-	ArrayList<String> test = new ArrayList<String>();
-	Food fd = new Food(test);
+	
+	Food fd;
 	
 
 	@Before
 	public void setUp() throws Exception {
+		ArrayList<String> test = new ArrayList<String>();
 		test.add("Cookie");
 		test.add("60");
 		test.add("6");
 		test.add("5");
 		test.add("3");
 		test.add("4");
+		fd = new Food(test);
 	}
 
 	@After
