@@ -18,6 +18,7 @@ private Connection myConnection = null;
     		{
     			myConnection.close();
     			myConnection = DriverManager.getConnection("jdbc:sqlite:/home/jbrownlee001/Dining Menu Database/databaseV9.db");
+
     		}
     		return myConnection;
     		
