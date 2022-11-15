@@ -60,13 +60,13 @@ if(day.equals("Saturday"))
 <meta charset="UTF-8">
 <title>Menu</title>
 </head>
+<h3>
+<%
+out.println(day+"'s Menu");
+%>
+</h3>
 <body>
 	<!-- This prints the selected day on the web page -->
-	<%
-	out.println(day+"'s Menu");
-	%>
-	<br>
-	<br>
 	<%
 	JDBCSelect js = new JDBCSelect();
 	ArrayList<String> bList = js.getMenu(dayParam, "Breakfast");
@@ -79,11 +79,11 @@ if(day.equals("Saturday"))
 	for(String s : bList)
 	{
 		out.println(s);
-		if(js.getAverageRatingbyFoodItem(s) != null)
-		{
-			out.println(", ");
-			out.println(String.format("%.2f",js.getAverageRatingbyFoodItem(s)));
-		}
+		//if(js.getAverageRatingbyFoodItem(s) != null)
+		//{
+		//	out.println(", ");
+		//	out.println(String.format("%.2f",js.getAverageRatingbyFoodItem(s)));
+		//}
 		%><a href="./ViewFoodItem.jsp?food_item=<%=s%>"> 
 		<button type="button">></button>
 		</a><%
@@ -99,11 +99,11 @@ if(day.equals("Saturday"))
 	for(String s : lList)
 	{
 		out.println(s);
-		if(js.getAverageRatingbyFoodItem(s) != null)
-		{
-			out.println(", ");
-			out.println(String.format("%.2f",js.getAverageRatingbyFoodItem(s)));
-		}
+		//if(js.getAverageRatingbyFoodItem(s) != null)
+		//{
+		//	out.println(", ");
+		//	out.println(String.format("%.2f",js.getAverageRatingbyFoodItem(s)));
+		//}
 		%><a href="./ViewFoodItem.jsp?food_item=<%=s%>"> 
 		<button type="button">></button>
 		</a><%
@@ -119,11 +119,11 @@ if(day.equals("Saturday"))
 	for(String s : dList)
 	{
 		out.println(s);
-		if(js.getAverageRatingbyFoodItem(s) != null)
-		{
-			out.println(", ");
-			out.println(String.format("%.2f",js.getAverageRatingbyFoodItem(s)));
-		}
+		//if(js.getAverageRatingbyFoodItem(s) != null)
+		//{
+		//	out.println(", ");
+		//	out.println(String.format("%.2f",js.getAverageRatingbyFoodItem(s)));
+		//}
 		%><a href="./ViewFoodItem.jsp?food_item=<%=s%>"> 
 		<button type="button">></button>
 		</a><%
