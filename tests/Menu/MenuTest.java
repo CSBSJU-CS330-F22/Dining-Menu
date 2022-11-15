@@ -12,14 +12,33 @@ import Food.Food;
 
 class MenuTest {
 	Menu mn;
+	Food item;
+	Food item2;
 	
 	
 	@BeforeEach
 	void setUp() throws Exception {
 		ArrayList<String> test = new ArrayList<String>();
+		ArrayList<String> food = new ArrayList<String>();
+		ArrayList<String> dish = new ArrayList<String>();
+		food.add("Cookie");
+		food.add("60");
+		food.add("6");
+		food.add("5");
+		food.add("3");
+		food.add("4");
+		
+		dish.add("Pasta");
+		dish.add("150");
+		dish.add("9");
+		dish.add("4");
+		dish.add("6");
+		dish.add("7");
+		
 		test.add("Monday");
 		test.add("Breakfast");
-		Food item = null;
+		item = new Food(food);
+		item2 = new Food(dish);
 		mn = new Menu(test, item);
 	}
 
@@ -28,8 +47,36 @@ class MenuTest {
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void testGetDate() {
+		assertEquals("Monday", mn.getDate());
+	}
+	
+	@Test
+	public void testSetDate() {
+		mn.setDate("Thursday");
+		assertEquals("Thursday", mn.getDate());
+	}
+	
+	@Test
+	public void testGetMealType() {
+		assertEquals("Breakfast", mn.getMealType());
+	}
+	
+	@Test
+	public void testSetMealType() {
+		mn.setMealType("Dinner");
+		assertEquals("Dinner", mn.getMealType());
+	}
+	
+	@Test
+	public void testGetFood() {
+		assertEquals(item, mn.getFood());
+	}
+	@Test
+	public void testSetFoodItem() {
+		mn.setFood(item2);
+		assertEquals(item2, mn.getFood());
+		
 	}
 
 }
