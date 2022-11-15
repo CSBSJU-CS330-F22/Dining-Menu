@@ -8,13 +8,19 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import Food.Food;
+
 class MenuTest {
-	ArrayList<String> test = new ArrayList<String>();
+	Menu mn;
+	
 	
 	@BeforeEach
 	void setUp() throws Exception {
+		ArrayList<String> test = new ArrayList<String>();
 		test.add("Monday");
 		test.add("Breakfast");
+		Food item = null;
+		mn = new Menu(test, item);
 	}
 
 	@AfterEach
