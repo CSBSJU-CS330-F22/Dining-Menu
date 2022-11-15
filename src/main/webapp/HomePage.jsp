@@ -1,4 +1,4 @@
-<!-- @Author Grant Evans -->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
@@ -174,8 +174,27 @@ span.psw {
 </style>
 
 <body>
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Create Account</button>
+<%
+if(session.getAttribute("loggedInUser") == null)
+{
+	%>
+	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+	<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Create Account</button>
+	<%
+}
+%>
+<%
+if(session.getAttribute("loggedInUser") != null)
+{
+	%>
+	<a href="./Logout_Action.jsp"> 
+	<button style="width:auto;">Logout</button>
+	</a>
+	<%
+	String email = (String)session.getAttribute("loggedInUser");
+	out.println("Hello, "+email);
+}
+%>
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="Login_Action.jsp" method="post">

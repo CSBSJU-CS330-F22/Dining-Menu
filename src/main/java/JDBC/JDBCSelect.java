@@ -9,6 +9,7 @@ public class JDBCSelect
     	try
     	{
     		Connection myConn = DriverManager.getConnection("jdbc:sqlite:/home/jbrownlee001/Dining Menu Database/databaseV9.db");
+
     		return myConn;
     	}
     	catch (Exception e)
@@ -37,6 +38,7 @@ public class JDBCSelect
         	al.add(myRes.getString(2));
         	al.add(myRes.getString(3));
         	al.add(myRes.getString(4));
+        	myRes.close();
         	return al;
         	        	
         } 
@@ -68,6 +70,7 @@ public class JDBCSelect
         		al.add(myRes.getString(1));
         	}
         	
+        	myRes.close();
         	return al;
         	        	
         } 
@@ -100,6 +103,7 @@ public class JDBCSelect
         	al.add(myRes.getString(5));
         	al.add(myRes.getString(6));
         	al.add(myRes.getString(7));
+        	myRes.close();
         	return al;
         	        	
         } 
@@ -138,6 +142,7 @@ public class JDBCSelect
         		al.add(l);
         	}
         	
+        	myRes.close();
         	return al;
         	        	
         } 
@@ -176,6 +181,7 @@ public class JDBCSelect
         		al.add(l);
         	}
         	
+        	myRes.close();
         	return al;
         	        	
         } 
@@ -201,6 +207,7 @@ public class JDBCSelect
         	ResultSet myRes = myStmt.executeQuery("SELECT AVG(Rating) FROM FoodReview WHERE FoodItemName = '"+foodItemName+"' GROUP BY FoodItemName");
         	
         	Double avg = myRes.getDouble(1);
+        	myRes.close();
         	return avg;
         	        	
         } 
@@ -236,6 +243,7 @@ public class JDBCSelect
         		al.add(l);
         	}
         	
+        	myRes.close();
         	return al;
         	        	
         } 
