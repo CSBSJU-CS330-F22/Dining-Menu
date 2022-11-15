@@ -12,20 +12,13 @@ private Connection myConnection = null;
     	{
     		if(myConnection == null)
     		{
-<<<<<<< HEAD
-    			myConnection = DriverManager.getConnection("jdbc:sqlite:/home/jnewhouse003/Dining Menu Database/databaseV7.db");
-=======
     			myConnection = DriverManager.getConnection("jdbc:sqlite:/home/jbrownlee001/Dining Menu Database/databaseV9.db");
->>>>>>> ce364b270bef920f33b9a5d2bb1b2e7002f79b71
     		}
     		else
     		{
     			myConnection.close();
-<<<<<<< HEAD
-    			myConnection = DriverManager.getConnection("jdbc:sqlite:/home/jnewhouse003/Dining Menu Database/databaseV7.db");
-=======
     			myConnection = DriverManager.getConnection("jdbc:sqlite:/home/jbrownlee001/Dining Menu Database/databaseV9.db");
->>>>>>> ce364b270bef920f33b9a5d2bb1b2e7002f79b71
+
     		}
     		return myConnection;
     		
