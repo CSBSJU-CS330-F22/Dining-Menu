@@ -174,7 +174,9 @@ span.psw {
 </style>
 
 <body>
+
 <%
+//checks if user is logged in yet, if not displays login and create account buttons
 if(session.getAttribute("loggedInUser") == null)
 {
 	%>
@@ -184,6 +186,7 @@ if(session.getAttribute("loggedInUser") == null)
 }
 %>
 <%
+// checks if user is logged in, if they are displays greeting and logout button
 if(session.getAttribute("loggedInUser") != null)
 {
 	%>
