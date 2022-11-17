@@ -133,7 +133,7 @@ out.println(day+"'s Menu");
 
 	<!-- element to return to home page -->
 	<div class="footer">
-		<a href="HomePage.html">Back to Home Page</a>
+		<a href="HomePage.jsp">Back to Home Page</a>
 	</div>
 </body>
 </html>
