@@ -190,6 +190,12 @@ if(session.getAttribute("loggedInUser") == null)
 if(session.getAttribute("loggedInUser") != null)
 {
 	%>
+	<a href="./ViewUserFoodReviews.jsp"> 
+	<button style="width:auto;">My Reviews</button>
+	</a>
+	<a href="./ViewUserFavoriteFoodItems.jsp"> 
+	<button style="width:auto;">My Favorites</button>
+	</a>
 	<a href="./Logout_Action.jsp"> 
 	<button style="width:auto;">Logout</button>
 	</a>
