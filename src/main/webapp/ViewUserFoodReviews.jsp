@@ -202,6 +202,10 @@ if(session.getAttribute("loggedInUser") != null)
 
 
 ArrayList<ArrayList<String>> reviewList = js.getFoodReviewsByUser(email);
+if(reviewList.isEmpty()){
+	out.println("You have not submitted any reviews yet.  Voice your opinion on the food!");
+}
+else{
 out.println("Reviews");
 ArrayList<Review> reviews = new ArrayList<Review>();
 for(ArrayList<String> r : reviewList){
@@ -229,6 +233,7 @@ for(Review s : reviews)
 	<br>
 	<br>
 	<%
+}
 }
 %>
 <!-- element to return to home page -->
