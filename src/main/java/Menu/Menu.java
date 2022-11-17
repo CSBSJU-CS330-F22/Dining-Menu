@@ -17,6 +17,12 @@ public class Menu {
 	private String mealType;
 	private Food food;
 	
+	/**
+	 * Creates a menu object that is used to for displaying menus the website
+	 * @param attributes
+	 * @param item
+	 */
+	
 	public Menu(ArrayList<String> attributes, Food item) {
 		this.date = attributes.get(0);
 		this.mealType = attributes.get(1);
