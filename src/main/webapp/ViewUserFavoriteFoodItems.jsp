@@ -19,16 +19,26 @@
 %>
 </h3>
 <br>
+
 <%
+//connection to the JDBC controller
 JDBCSelect js = new JDBCSelect();
+
+//Retrieving favorite food items from the database
 ArrayList<ArrayList<String>> favList = js.getFavoriteFoodItemsByUser(email);
 ArrayList<String> foods = new ArrayList<String>();
+
+// if list is empty displays that the user has no favorite foods
 if(favList.isEmpty()){
 	out.println("No favorite foods :(");
 }
+
+//goes through arraylist and creates food items for each favorite food
 for(ArrayList<String> foodList : favList){
 	foods.add(foodList.get(0));
 }
+
+//displays each food and reference to the food item to see nutrition for each food item
 for(String name : foods){
 	out.println(name);
 	%><a href="./ViewFoodItem.jsp?food_item=<%=name%>"> 
@@ -38,6 +48,7 @@ for(String name : foods){
 }
 %>
 <body>
+
 	<div class="footer">
 		<a href="HomePage.jsp">Back to Home Page</a>
 	</div>
