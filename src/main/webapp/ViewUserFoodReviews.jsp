@@ -184,7 +184,9 @@ span.psw {
 </style>
 
 <body>
-<%JDBCSelect js = new JDBCSelect();
+<%
+//creates JDBC connection to call to the database
+JDBCSelect js = new JDBCSelect();
 JDBCInsert ji = new JDBCInsert();
 %>
 
@@ -200,13 +202,16 @@ if(session.getAttribute("loggedInUser") != null)
 
 }
 
-
+// gets reviews from the database
 ArrayList<ArrayList<String>> reviewList = js.getFoodReviewsByUser(email);
+//if list is empty displays message saying no reviews
 if(reviewList.isEmpty()){
 	out.println("You have not submitted any reviews yet.  Voice your opinion on the food!");
 }
 else{
 out.println("Reviews");
+
+//creates a review object for each user reveiw and then displays them
 ArrayList<Review> reviews = new ArrayList<Review>();
 for(ArrayList<String> r : reviewList){
 	Review rv = new Review(r);

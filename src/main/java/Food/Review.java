@@ -18,7 +18,7 @@ public class Review {
 	private String reviewDescrip;
 	private boolean anon;
 	/**
-	 * 
+	 * creates review object with information frm the arraylist
 	 */
 	public Review(ArrayList<String> reviewInfo) {
 		this.itemName = reviewInfo.get(0);
@@ -29,6 +29,7 @@ public class Review {
 		this.anon = Boolean.parseBoolean(reviewInfo.get(5));
 	}
 	
+	//creates an empty review object with default data
 	public Review() {
 		this.itemName = "name";
 		this.userEmail = "test001@test";
