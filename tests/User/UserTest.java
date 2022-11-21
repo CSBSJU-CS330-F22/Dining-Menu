@@ -15,6 +15,11 @@ User ut;
 Food item;
 Food item2;
 	
+/*
+ * User: creates a user
+ * test: creates a food object
+ * Dish: creates a food Item
+ */
 	@Before
 	public void setUp() throws Exception {
 		ArrayList<String> user = new ArrayList<String>();
@@ -50,38 +55,59 @@ Food item2;
 	public void tearDown() throws Exception {
 	}
 
+	/*
+	 * Checks to see if the email is matching the list
+	 */
 	@Test
 	public void testGetEmail() {
 		assertEquals("Jbrownlee001@csbsju.edu", ut.getEmail());
 	}
+	/*
+	 * Sets an email and checks to see if it's added to the list
+	 */
 	@Test
 	public void testSetEmail() {
 		ut.setEmail("Gevans002@csbsju.edu");
 		assertEquals("Gevans002@csbsju.edu", ut.getEmail());
 	}
 	
+/*
+ * Checks to see if the password is matching the list
+ */
 	@Test
 	public void testGetPassword() {
 		assertEquals("Password", ut.getPassword());
 	}
 	
+	/*
+	 * Sets a password and checks to see if it's added to the list
+	 */
 	@Test
 	public void testSetPassword() {
 		ut.setPassword("Testing1234");
 		assertEquals("Testing1234", ut.getPassword());
 	}
 	
+	/*
+	 * Checks to see if the first name is matching the list
+	 */
 	@Test
 	public void testGetFirstName() {
 		assertEquals("Jayden", ut.getFirstName());
 	}
 	
+	/*
+	 * Sets a first name and checks to see if it's added to the list
+	 */
 	@Test
 	public void testSetFirstName() {
 		ut.setFirstName("Jack");
 		assertEquals("Jack", ut.getFirstName());
 	}
 	
+	/*
+	 * Checks to see if the last name is matching the list
+	 */
 	@Test
 	public void testGetLastName() {
 		assertEquals("Brownlee", ut.getLastName());
@@ -93,11 +119,17 @@ Food item2;
 		assertEquals("Olsen", ut.getLastName());
 	}
 	
+	/*
+	 * Checks to see if the favorite is matching the item
+	 */
 	@Test
 	public void testGetFavFood() {
 		assertEquals(item, ut.getFavFood());
 	}
 	
+	/*
+	 * Sets a new favorite food and checks to see if it's added to the list
+	 */
 	@Test
 	public void testSetFavFood() {
 		ut.setFavFood(item2);
