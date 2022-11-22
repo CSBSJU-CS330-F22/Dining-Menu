@@ -15,3 +15,6 @@ Second, open JDBCSelect.java. Go to the line that says: Connection myConn = Driv
 Make the same changes here. 
 Last, go into your eclipse project and right click on your project name on the left side. (It should say "Dining Menu Web [Dining-Menu-XX Main]") Go down to build path and select "configure build path." Then, make sure the first item says: sqlite-jdbc-3.39.3.0.jar - home/YOURNAME/Dining Menu Database. If it is under another person's name, your project will not work. 
 
+**Resources**
+SQLite Studio: https://sqlitestudio.pl/
+sqlite-jdbc-3.39.3.0.jar: https://github.com/xerial/sqlite-jdbc/releases
