@@ -10,6 +10,9 @@ String day = request.getParameter("SelectedDay");
 //prints the day to console
 System.out.println(day);
 
+/**Takes the button that was pressed on the hompage and changes it to the date. dayParam is used
+* later to get and display the correct menu.
+*/
 String dayParam = "";
 if(day.equals("Sunday"))
 {
