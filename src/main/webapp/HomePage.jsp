@@ -211,7 +211,7 @@ if(session.getAttribute("loggedInUser") != null)
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="https://user-images.githubusercontent.com/99437824/197000824-fab9e603-2964-483c-9c0d-6f7bde516a0f.png" width= "500" height = "500" width= "500" height = "500" alt="Avatar" class="avatar" height="250" width="15">
     </div>
-
+/* This is where users enter username/email and password to log in */
     <div class="container">
       <label for="user_email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="user_email" required>
@@ -237,7 +237,7 @@ if(session.getAttribute("loggedInUser") != null)
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="https://user-images.githubusercontent.com/99437824/197000824-fab9e603-2964-483c-9c0d-6f7bde516a0f.png" width= "500" height = "500" width= "500" height = "500" alt="Avatar" class="avatar" height="250" width="15">
     </div>
-
+/*  this is for new users to enter there information to create an account */
     <div class="container">
       <label for="usr"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="usr" required>
