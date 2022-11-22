@@ -176,6 +176,7 @@ span.psw {
 <body>
 <h3>
 <%
+//below gets the food item and matching food review to print to the webpage
 JDBCSelect js = new JDBCSelect();
 JDBCInsert ji = new JDBCInsert();
 String foodItem = request.getParameter("food_item");
@@ -195,6 +196,7 @@ if(js.getAverageRatingbyFoodItem(foodItem) != null)
       <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
 
+	<!-- elements that allows user to submit a review for the selected food item -->
     <div class="container">
       <label for="food_item"><b>Food Item</b></label>
       <input type="text" placeholder="Food Item" name="food_item" value="<%=foodItem%>" readonly>
@@ -251,6 +253,7 @@ if(session.getAttribute("loggedInUser") != null)
 
 %>
 <br>
+<!-- below prints nutrition information to webpage -->
 <%
 out.println("Calories: ");
 out.println(foodList.get(2));
