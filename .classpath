@@ -15,6 +15,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="/net/home/jolsen001/CS330/SQLite JDBC Driver/sqlite-jdbc-3.39.3.0.jar"/>
+	<classpathentry kind="lib" path="/home/bhoeschen002/Dining Menu Database/sqlite-jdbc-3.39.3.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
