@@ -14,12 +14,12 @@ private Connection myConnection = null;
     		{
 
 
-    			myConnection = DriverManager.getConnection("jdbc:sqlite:/home/bhoeschen002/Dining Menu Database/databaseV8.db");
+    			myConnection = DriverManager.getConnection("jdbc:sqlite:/home/bhoeschen002/Dining Menu Database/databaseV9.db");
     		}
     		else
     		{
     			myConnection.close();
-    			myConnection = DriverManager.getConnection("jdbc:sqlite:/home/bhoeschen002/Dining Menu Database/databaseV8.db");
+    			myConnection = DriverManager.getConnection("jdbc:sqlite:/home/bhoeschen002/Dining Menu Database/databaseV9.db");
 
     		}
     		return myConnection;
