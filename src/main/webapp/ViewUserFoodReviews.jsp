@@ -206,10 +206,10 @@ if(session.getAttribute("loggedInUser") != null)
 ArrayList<ArrayList<String>> reviewList = js.getFoodReviewsByUser(email);
 //if list is empty displays message saying no reviews
 if(reviewList.isEmpty()){
-	out.println("You have not submitted any reviews yet.  Voice your opinion on the food!");
+	%><h3><%out.println("You have not submitted any reviews yet.  Voice your opinion on the food!");%></h3><%
 }
 else{
-out.println("Reviews");
+%><h3><%out.println("Reviews");%></h3><%
 
 //creates a review object for each user reveiw and then displays them
 ArrayList<Review> reviews = new ArrayList<Review>();
@@ -220,15 +220,18 @@ for(ArrayList<String> r : reviewList){
 %>
 <br>
 <% 
+String rating = "rating";
+String fi = "Food Item";
+String description = "Description";
 for(Review s : reviews)
 {
-	//Title, Rating/5
-	out.println(s.getTitle() + ", " + s.getRating() + "/5");
+	//food item name
+	out.println(s.getItemName());
 	%>
 	<br>
 	<%
-	//By: email@csbsju.edu
-	out.println("By: " + s.getUserEmail());
+	//Title, Rating/5
+	out.println(s.getTitle() + ", " + s.getRating() + "/5");
 	%>
 	<br>
 	<%
