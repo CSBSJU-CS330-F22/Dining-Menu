@@ -226,8 +226,42 @@ String description = "Description";
 for(Review s : reviews)
 {
 	//food item name
+	String foodItemName = s.getItemName();
+	String titleName = s.getTitle();
+	String descName = s.getReviewDescrip();
+	String ratingName = s.getRating();
 	out.println(s.getItemName());
 	%>
+	<button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Edit Review</button>
+	<div id="id04" class="modal">
+  
+  <form class="modal-content animate" action="EditReview_Action.jsp" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+	<!-- elements that allows user to submit a review for the selected food item -->
+    <div class="container">
+      <label for="food_item"><b>Food Item</b></label>
+      <input type="text" placeholder="Food Item" name="food_item" value="<%=foodItemName%>" readonly>
+      
+      <label for="title"><b>Title</b></label>
+      <input type="text" placeholder="Enter Title" name="title" value="<%=titleName%>" required>
+
+      <label for="desc"><b>Description</b></label>
+      <input type="text" placeholder="Enter Description" name="desc" value="<%=descName%>" required>
+      
+      <label for="rating"><b>Rating</b></label>
+      <input type="number" placeholder="Enter Rating" min="1" max="5" name="rating" value="<%=ratingName%>" required>
+
+      <button type="submit">Edit Review</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
 	<br>
 	<%
 	//Title, Rating/5
