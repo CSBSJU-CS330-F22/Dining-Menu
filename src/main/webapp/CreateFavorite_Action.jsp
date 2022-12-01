@@ -24,7 +24,8 @@ String s = ji.createFavorite(email, foodItem, noti);
 
 //Prints message to console for debugging and redirects user to HomePage
 System.out.println(s);
-response.sendRedirect("HomePage.jsp");
+session.setAttribute("currentFoodItem", foodItem);
+response.sendRedirect("ViewFoodItem.jsp");
 %>
 </body>
 </html>
