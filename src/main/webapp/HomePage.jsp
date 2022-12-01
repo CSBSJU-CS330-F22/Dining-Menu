@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="JDBC.*" import="java.util.*" import="java.sql.*" import="java.io.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -174,7 +174,11 @@ span.psw {
 </style>
 
 <body>
-
+<%
+String passString = "";
+String fnString = "";
+String lnString = "";
+%>
 <%
 //checks if user is logged in yet, if not displays login and create account buttons
 if(session.getAttribute("loggedInUser") == null)
@@ -196,12 +200,19 @@ if(session.getAttribute("loggedInUser") != null)
 	<a href="./ViewUserFavoriteFoodItems.jsp"> 
 	<button style="width:auto;">My Favorites</button>
 	</a>
+	<button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Edit Profile</button>
 	<a href="./Logout_Action.jsp"> 
 	<button style="width:auto;">Logout</button>
 	</a>
 	<%
 	String email = (String)session.getAttribute("loggedInUser");
 	out.println("Hello, "+email);
+	
+	JDBCSelect js = new JDBCSelect();
+	ArrayList<String> al = js.getUser(email);
+	passString = al.get(1);
+	fnString = al.get(2);
+	lnString = al.get(3);
 }
 %>
 <div id="id01" class="modal">
@@ -259,6 +270,35 @@ if(session.getAttribute("loggedInUser") != null)
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">Password?</a></span>
+    </div>
+  </form>
+</div>
+<div id="id03" class="modal">
+  
+  <form class="modal-content animate" action="EditProfile_Action.jsp" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://user-images.githubusercontent.com/99437824/197000824-fab9e603-2964-483c-9c0d-6f7bde516a0f.png" width= "500" height = "500" width= "500" height = "500" alt="Avatar" class="avatar" height="250" width="15">
+    </div>
+<!-- this is for new users to enter there information to create an account -->
+    <div class="container">
+      <label for="usr"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="usr" value="<%=(String)session.getAttribute("loggedInUser")%>" readonly>
+
+      <label for="pwd"><b>Password</b></label>
+      <input type="text" placeholder="Enter Password" name="pwd" value="<%=passString%>" required>
+      
+      <label for="user_firstName"><b>First Name</b></label>
+      <input type="text" placeholder="Enter First Name" name="user_firstName" value="<%=fnString%>" required>
+      
+      <label for="user_lastName"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last Name" name="user_lastName" value="<%=lnString%>" required>
+         
+      <button type="submit">Save</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </form>
 </div>
