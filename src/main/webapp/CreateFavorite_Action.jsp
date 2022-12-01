@@ -20,7 +20,8 @@ JDBCInsert ji = new JDBCInsert();
 String s = ji.createFavorite(email, foodItem, noti);
 
 System.out.println(s);
-response.sendRedirect("HomePage.jsp");
+session.setAttribute("currentFoodItem", foodItem);
+response.sendRedirect("ViewFoodItem.jsp");
 %>
 </body>
 </html>

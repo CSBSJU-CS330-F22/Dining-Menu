@@ -178,7 +178,19 @@ span.psw {
 <%
 JDBCSelect js = new JDBCSelect();
 JDBCInsert ji = new JDBCInsert();
-String foodItem = request.getParameter("food_item");
+String foodItem = "";
+
+if(session.getAttribute("currentFoodItem") == null)
+{
+	foodItem = request.getParameter("food_item");
+}
+else 
+{
+	foodItem = (String)session.getAttribute("currentFoodItem");
+	session.setAttribute("currentFoodItem", null);
+}
+
+//String foodItem = request.getParameter("food_item");
 out.println(foodItem);
 if(js.getAverageRatingbyFoodItem(foodItem) != null)
 {
@@ -243,7 +255,14 @@ if(session.getAttribute("loggedInUser") != null)
 		
 		%>
 		<a href="./CreateFavorite_Action.jsp?food_item=<%=foodItem%>"> 
-		<button style="width:auto;">Add to Favorite</button>
+		<button style="width:auto;">Add to Favorites</button>
+		</a>
+		<%
+	}
+	else {
+		%>
+		<a href="./RemoveFavorite_Action.jsp?food_item=<%=foodItem%>"> 
+		<button style="width:auto;">Remove From Favorites</button>
 		</a>
 		<%
 	}
@@ -303,5 +322,14 @@ for(ArrayList<String> l : reviewList)
 	<%
 }
 %>
+
+<%
+String d = (String)session.getAttribute("currentDay");
+%>
+		<a href="./ViewMenu.jsp?SelectedDay=<%=d%>"> 
+		<button style="width:auto;">Back to Menu</button>
+		</a>
+
+
 </body>
 </html>

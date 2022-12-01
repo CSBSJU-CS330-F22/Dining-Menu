@@ -7,6 +7,7 @@
 <%
 //Gets the day that was clicked into a usable variable
 String day = request.getParameter("SelectedDay");
+session.setAttribute("currentDay", day);
 //prints the day to console
 System.out.println(day);
 
@@ -133,7 +134,7 @@ out.println(day+"'s Menu");
 
 	<!-- element to return to home page -->
 	<div class="footer">
-		<a href="HomePage.html">Back to Home Page</a>
+		<a href="HomePage.jsp">Back to Home Page</a>
 	</div>
 </body>
 </html>
