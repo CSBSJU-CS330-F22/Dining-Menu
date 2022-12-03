@@ -13,7 +13,7 @@ import Food.Food;
 /**
  * @author Jayden Brownlee
  */
-class MenuTest {
+public class MenuTest {
 	Menu mn;
 	Food item;
 	Food item2;
