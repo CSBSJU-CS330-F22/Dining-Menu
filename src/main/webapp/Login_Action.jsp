@@ -30,7 +30,7 @@ else
 {
 	//Outputs message to console, and redirects user back to the home page
 	System.out.println("Login failed.");
-	response.sendRedirect("HomePage.jsp");
+	response.sendRedirect("Login_Failed.jsp");
 }
 %>
 </body>
