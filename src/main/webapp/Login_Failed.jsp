@@ -5,16 +5,7 @@
 <head>
 <meta charset="UTF-8">
 
-<style>
-      
-      logo {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
-}
-      
-    </style>
+
 
 <title>SJU Dining Menu</title>
 </head>
