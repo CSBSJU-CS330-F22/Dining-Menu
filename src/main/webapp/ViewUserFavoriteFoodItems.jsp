@@ -10,10 +10,20 @@
 	bottom: 0;
 	padding: 10px;
 }
+
+.menuBackground {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 400px;
+	background-image: linear-gradient(red,grey, white);
+	font-size:40px;
+}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Favorite Foods</title>
 </head>
+<div class="menuBackground">
 <%String email = (String)session.getAttribute("loggedInUser");
 %><h3><% out.println(email+"'s Favorite Foods");
 %>
@@ -47,6 +57,7 @@ for(String name : foods){
 	%><br><%
 }
 %>
+</div>
 <body>
 
 	<div class="footer">
