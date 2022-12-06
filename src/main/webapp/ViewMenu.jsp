@@ -7,6 +7,7 @@
 <%
 //Gets the day that was clicked into a usable variable
 String day = request.getParameter("SelectedDay");
+session.setAttribute("currentDay", day);
 //prints the day to console
 System.out.println(day);
 
