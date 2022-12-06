@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <style>
+.menuBackground {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 400px;
+	background-image: linear-gradient(red,grey, white);
+	font-size:40px;
+}
 
 /*this sets design attributes to the header*/
 .header {
@@ -46,7 +54,7 @@
 }
 
 /*this sets design attributes to the footer*/
-.aboutThisSite {
+.footer {
 	position: fixed;
 	bottom: 0;
 	padding: 10px;
@@ -184,6 +192,7 @@ span.psw {
 </style>
 
 <body>
+<div class="menuBackground">
 <%
 //creates JDBC connection to call to the database
 JDBCSelect js = new JDBCSelect();
@@ -278,6 +287,7 @@ for(Review s : reviews)
 }
 }
 %>
+</div>
 <!-- element to return to home page -->
 	<div class="footer">
 		<a href="HomePage.jsp">Back to Home Page</a>
