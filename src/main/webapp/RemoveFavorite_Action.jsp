@@ -8,5 +8,19 @@
 </head>
 <body>
 
+<%
+String email = (String)session.getAttribute("loggedInUser");
+String foodItem = request.getParameter("food_item");
+
+System.out.println(email);
+System.out.println(foodItem);
+
+JDBCUpdateDelete jud = new JDBCUpdateDelete();
+jud.removeFavorite(email, foodItem);
+
+session.setAttribute("currentFoodItem", foodItem);
+response.sendRedirect("ViewFoodItem.jsp");
+%>
+
 </body>
 </html>
